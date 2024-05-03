@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { RacesIndex } from "./RacesIndex";
 import { RacesShow } from "./RacesShow";
 import { Modal } from "./Modal";
+import { Signup } from "./Signup";
+import { Login } from "./Login";
 
 export function Content() {
   const [races, setRaces] = useState([]);
@@ -32,6 +34,8 @@ export function Content() {
 
   return (
     <main>
+      <Signup />
+      <Login />
       <RacesIndex races={races} onShowRace={handleShowRace} />
       <Modal show={isRacesShowVisible} onClose={handleClose}>
         <RacesShow race={currentRace} />
