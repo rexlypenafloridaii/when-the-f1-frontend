@@ -14,7 +14,7 @@ export function Content() {
 
   const handleIndexRaces = () => {
     console.log("handleIndexRaces");
-    axios.get("http://localhost:3000/races.json").then((response) => {
+    axios.get("https://api.openf1.org/v1/sessions?year=2024&session_type=Race&session_name=Race").then((response) => {
       console.log(response.data);
       setRaces(response.data);
     });
