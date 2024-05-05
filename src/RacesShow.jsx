@@ -3,8 +3,7 @@ export function RacesShow(props) {
     <div>
       <h1>Race information</h1>
       <p>Track: {props.race.location}</p>
-      <p>Date: {props.race.date}</p>
-      <p>Time: {props.race.time}</p>
+      <p>Time: {props.race.date_start}</p>
     </div>
   );
 }
