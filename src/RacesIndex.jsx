@@ -1,7 +1,7 @@
 export function RacesIndex(props) {
   return (
     <div>
-      <h1>All Races</h1>
+      <h1>When The F1?</h1>
       {props.races.map((race) => (
         <div key={race.id}>
           <h2>{race.location}</h2>
