@@ -5,6 +5,7 @@ import { RacesShow } from "./RacesShow";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
+import { Routes, Route } from "react-router-dom";
 
 export function Content() {
   const [races, setRaces] = useState([]);
@@ -34,9 +35,12 @@ export function Content() {
 
   return (
     <main>
-      <Signup />
-      <Login />
-      <RacesIndex races={races} onShowRace={handleShowRace} />
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/races" element={<RacesIndex races={races} onShowRace={handleShowRace} />} />
+        <Route path="/" element={<RacesIndex races={races} onShowRace={handleShowRace} />} />
+      </Routes>
       <Modal show={isRacesShowVisible} onClose={handleClose}>
         <RacesShow race={currentRace} />
       </Modal>
