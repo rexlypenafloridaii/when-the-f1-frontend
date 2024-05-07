@@ -30,20 +30,22 @@ export function Login() {
 
   return (
     <div id="login">
-      <h1>Login</h1>
-      <ul>
+      <h1>Please Log In</h1>
+      <ul className="text-red-600">
         {errors.map((error) => (
           <li key={error}>{error}</li>
         ))}
       </ul>
       <form onSubmit={handleSubmit}>
         <div>
-          Email: <input name="email" type="email" />
+          Email: <input className="border-2 rounded-full border-black" name="email" type="email" />
         </div>
         <div>
-          Password: <input name="password" type="password" />
+          Password: <input className="border-2 rounded-full border-black" name="password" type="password" />
         </div>
-        <button type="submit">Login</button>
+        <button className="border-2 px-2 py-2 bg-green-400" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );
