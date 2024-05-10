@@ -1,4 +1,6 @@
 import axios from "axios";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import { useState, useEffect } from "react";
 import { RacesIndex } from "./RacesIndex";
 import { RacesShow } from "./RacesShow";
@@ -11,6 +13,11 @@ export function Content() {
   const [races, setRaces] = useState([]);
   const [isRacesShowVisible, setIsRacesShowVisible] = useState(false);
   const [currentRace, setCurrentRace] = useState({});
+  const [value, setValue] = useState(new Date());
+
+  function onChange(nextValue) {
+    setValue(nextValue);
+  }
 
   const handleIndexRaces = () => {
     console.log("handleIndexRaces");
@@ -44,6 +51,7 @@ export function Content() {
       <Modal show={isRacesShowVisible} onClose={handleClose}>
         <RacesShow race={currentRace} />
       </Modal>
+      <Calendar onChange={onChange} value={value} />
     </main>
   );
 }

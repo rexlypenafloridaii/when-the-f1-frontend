@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 export function RacesIndex(props) {
   return (
-    <div className="h-screen">
+    <div>
       <h1 className="text-center text-5xl">When The F1?</h1>
       <div className=" grid grid-cols-1 sm:grid-cols-3 gap-8 m-6">
         {props.races.map((race) => (
