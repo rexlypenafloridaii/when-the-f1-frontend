@@ -3,7 +3,7 @@ export function RacesIndex(props) {
   return (
     <div>
       <h1 className="text-center text-5xl">When The F1?</h1>
-      <div className=" grid grid-cols-1 sm:grid-cols-3 gap-8 m-6">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 gap-8 m-6">
         {props.races.map((race) => (
           <div className="grid border-2 text-center border-black" key={race.id}>
             <h2 className="text-2xl p-0">Track: {race.location}</h2>

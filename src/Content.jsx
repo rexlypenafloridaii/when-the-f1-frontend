@@ -51,7 +51,9 @@ export function Content() {
       <Modal show={isRacesShowVisible} onClose={handleClose}>
         <RacesShow race={currentRace} />
       </Modal>
-      <Calendar onChange={onChange} value={value} />
+      <div className="grid place-content-center">
+        <Calendar onChange={onChange} value={value} />
+      </div>
     </main>
   );
 }
