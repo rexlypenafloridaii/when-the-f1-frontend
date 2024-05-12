@@ -1,4 +1,6 @@
 import axios from "axios";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import { useState, useEffect } from "react";
 import { RacesIndex } from "./RacesIndex";
 import { RacesShow } from "./RacesShow";
@@ -39,7 +41,7 @@ export function Content() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/races" element={<RacesIndex races={races} onShowRace={handleShowRace} />} />
-        <Route path="/" element={<RacesIndex races={races} onShowRace={handleShowRace} />} />
+        <Route path="/" element={<Login />} />
       </Routes>
       <Modal show={isRacesShowVisible} onClose={handleClose}>
         <RacesShow race={currentRace} />
