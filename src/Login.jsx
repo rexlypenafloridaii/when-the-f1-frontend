@@ -54,10 +54,17 @@ export function Login() {
         </form>
       </div>
       <div className="flex justify-center">
-        Don&apos;t have an account? {""}
+        Don&apos;t have an account?{""}
         <Link className="nav-link text-blue-700" to="/signup">
+          {" "}
           Sign up here.
         </Link>
+      </div>
+      <div className="flex justify-center">
+        <img
+          className="f1.gif"
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDJpN3c3aGE1NDd4dzd2aDd3ZHpvN2gzb2xxNnZ1NTdhbXN1c3FoayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iJDLBX5GY8niCpZYkR/giphy.gif"
+        />
       </div>
     </div>
   );
