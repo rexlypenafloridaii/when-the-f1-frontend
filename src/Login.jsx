@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const jwt = localStorage.getItem("jwt");
 if (jwt) {
@@ -30,23 +31,34 @@ export function Login() {
 
   return (
     <div id="login">
-      <h1 className="text-center text-2xl">Please Log In</h1>
-      <ul className="text-red-600">
-        {errors.map((error) => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Email: <input className="border-2 rounded-full border-black" name="email" type="email" />
-        </div>
-        <div>
-          Password: <input className="border-2 rounded-full border-black" name="password" type="password" />
-        </div>
-        <button className="border-2 px-2 py-2 bg-green-400" type="submit">
-          Login
-        </button>
-      </form>
+      <h1 className="text-center text-2xl">Welcome to When the F1</h1>
+      <h1 className="text-center text-lg">Please Log In</h1>
+      <div className="flex justify-center ">
+        <ul className="text-red-600">
+          {errors.map((error) => (
+            <li key={error}>{error}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="flex justify-center ">
+        <form onSubmit={handleSubmit}>
+          <div>
+            Email: <input className="border-2 rounded-full border-black" name="email" type="email" />
+          </div>
+          <div>
+            Password: <input className="border-2 rounded-full border-black" name="password" type="password" />
+          </div>
+          <button className="border-2 px-2 py-2 bg-green-400" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+      <div className="flex justify-center">
+        Don&apos;t have an account? {""}
+        <Link className="nav-link text-blue-700" to="/signup">
+          Sign up here.
+        </Link>
+      </div>
     </div>
   );
 }
