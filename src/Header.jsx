@@ -21,7 +21,7 @@ export function Header() {
           <>
             <div className="flex justify-center text-lg">
               <a className="nav-item bg-black px-3 py-2 hover:bg-white">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/races">
                   Home
                 </Link>
               </a>
