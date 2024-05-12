@@ -22,6 +22,7 @@ npm run dev
 
 Make sure that the frontend is running on http://locahost:5173.
 Backend should be running on http://localhost:3000.
+Learn more about the [backend](https://github.com/rexlypenafloridaii/when-the-f1).
 
 ## Roadmap
 
