@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-main-pattern">
       <BrowserRouter>
         <Header />
         <div className="container mx-auto flex-auto p-4">

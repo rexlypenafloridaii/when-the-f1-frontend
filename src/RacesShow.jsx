@@ -3,11 +3,9 @@ export function RacesShow(props) {
   const date = new Date(props.race.date_start);
   const localDate = date.toLocaleString();
   return (
-    <div className="text-center">
-      <h1 className="text-2xl">Race Information</h1>
-      <p>Track: {props.race.location}</p>
-      <p>Local Start Time: {props.race.date_start}</p>
-      <p className="text-2xl">My Start Time: {localDate}</p>
+    <div className="text-center bg-main-pattern">
+      <p className="text-2xl">Track: {props.race.location}</p>
+      <p className="text-lg">Your Start Time: {localDate}</p>
     </div>
   );
 }

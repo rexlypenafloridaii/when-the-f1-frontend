@@ -13,11 +13,6 @@ export function Content() {
   const [races, setRaces] = useState([]);
   const [isRacesShowVisible, setIsRacesShowVisible] = useState(false);
   const [currentRace, setCurrentRace] = useState({});
-  const [value, setValue] = useState(new Date());
-
-  function onChange(nextValue) {
-    setValue(nextValue);
-  }
 
   const handleIndexRaces = () => {
     console.log("handleIndexRaces");
@@ -46,14 +41,11 @@ export function Content() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/races" element={<RacesIndex races={races} onShowRace={handleShowRace} />} />
-        <Route path="/" element={<RacesIndex races={races} onShowRace={handleShowRace} />} />
+        <Route path="/" element={<Login />} />
       </Routes>
       <Modal show={isRacesShowVisible} onClose={handleClose}>
         <RacesShow race={currentRace} />
       </Modal>
-      <div className="grid place-content-center">
-        <Calendar onChange={onChange} value={value} />
-      </div>
     </main>
   );
 }

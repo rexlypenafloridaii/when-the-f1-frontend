@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "main-pattern": "url(https://www.toptal.com/designers/subtlepatterns/uploads/gravel.png)",
+      },
+    },
   },
   plugins: [],
 };
