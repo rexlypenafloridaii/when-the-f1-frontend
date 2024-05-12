@@ -1,8 +1,31 @@
-# React + Vite
+# When the F1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A glorified timezone converter version for Formula 1 races throughout the season.
 
-Currently, two official plugins are available:
+Users need to sign up for an account and log in to see race information such as location, track name, and race start time (automatically converted to the user's current location).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technologies for the backend of "When the F1" include Ruby on Rails, PostgreSQL database, React.js, and most importantly the OpenF1 open source API.
+
+![screenshot](screenshot.png)
+
+## Installation
+
+```bash
+npm install
+```
+
+## Usage
+
+```bash
+npm run dev
+```
+
+Make sure that the frontend is running on http://locahost:5173.
+Backend should be running on http://localhost:3000.
+
+## Roadmap
+
+Upcoming features include:
+- Weather information for each race
+- Dedicated section for driver and constructor standings throughout the season.
+- Additional visual improvements
