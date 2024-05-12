@@ -23,30 +23,34 @@ export function Signup() {
 
   return (
     <div id="signup">
-      <h1>Signup</h1>
-      <ul>
-        {errors.map((error) => (
-          <li key={error}>{error}</li>
-        ))}
-      </ul>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Name: <input className="border-2 rounded-full border-black" name="name" type="text" />
-        </div>
-        <div>
-          Email: <input className="border-2 rounded-full border-black" name="email" type="email" />
-        </div>
-        <div>
-          Password: <input className="border-2 rounded-full border-black" name="password" type="password" />
-        </div>
-        <div>
-          Password confirmation:{" "}
-          <input className="border-2 rounded-full border-black" name="password_confirmation" type="password" />
-        </div>
-        <button className="border-2 px-2 py-2 bg-green-400" type="submit">
-          Signup
-        </button>
-      </form>
+      <h1 className="text-center text-lg">Signup</h1>
+      <div className="flex justify-center">
+        <ul className="text-red-600">
+          {errors.map((error) => (
+            <li key={error}>{error}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="flex justify-center">
+        <form onSubmit={handleSubmit}>
+          <div>
+            Name: <input className="border-2 rounded-full border-black" name="name" type="text" />
+          </div>
+          <div>
+            Email: <input className="border-2 rounded-full border-black" name="email" type="email" />
+          </div>
+          <div>
+            Password: <input className="border-2 rounded-full border-black" name="password" type="password" />
+          </div>
+          <div>
+            Password confirmation:{" "}
+            <input className="border-2 rounded-full border-black" name="password_confirmation" type="password" />
+          </div>
+          <button className="border-2 px-2 py-2 bg-green-400" type="submit">
+            Signup
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
