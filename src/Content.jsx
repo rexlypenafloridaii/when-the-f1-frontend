@@ -16,7 +16,7 @@ export function Content() {
 
   const handleIndexRaces = () => {
     console.log("handleIndexRaces");
-    axios.get("http://localhost:3000/races.json").then((response) => {
+    axios.get("/races.json").then((response) => {
       console.log(response.data);
       setRaces(response.data);
     });
